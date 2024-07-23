@@ -1,4 +1,5 @@
 .btn {
+  &,
   &:link,
   &:visited {
     font-size: $default-font-size;
@@ -9,6 +10,16 @@
     border-radius: 100px;
     transition: all 0.3s;
     position: relative;
+
+    // change for the <button> element
+    border: none;
+    cursor: pointer;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
   }
 
   &:hover {
