@@ -7,9 +7,29 @@
 }
 
 html {
-  font-size: 62.5%;
+  // defines the size of 1rem (100% = 16px)
+  font-size: 62.5%; // 1rem = 10px (10/16 = 0.625)
+
+  // phone size not needed, first breakpoint will be tablet-portrait
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1rem = 9px (9/16 = 0.5625)
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // 1rem = 8px (8/16 = 0.5)
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; // 1rem = 12 (12/16 = 0.75)
+  }
 }
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }
